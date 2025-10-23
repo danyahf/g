@@ -1,0 +1,70 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd">
+
+    <changeSet id="insert-users-roles" author="danylo_demchenko@epam.com" context="local">
+
+        <insert tableName="users_roles">
+            <column name="role_id" valueNumeric="1"/>
+            <column name="user_id" valueNumeric="13"/>
+        </insert>
+
+        <insert tableName="users_roles">
+            <column name="role_id" valueNumeric="2"/>
+            <column name="user_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="users_roles">
+            <column name="role_id" valueNumeric="2"/>
+            <column name="user_id" valueNumeric="3"/>
+        </insert>
+
+        <insert tableName="users_roles">
+            <column name="role_id" valueNumeric="2"/>
+            <column name="user_id" valueNumeric="4"/>
+        </insert>
+
+        <insert tableName="users_roles">
+            <column name="role_id" valueNumeric="2"/>
+            <column name="user_id" valueNumeric="5"/>
+        </insert>
+
+        <insert tableName="users_roles">
+            <column name="role_id" valueNumeric="2"/>
+            <column name="user_id" valueNumeric="6"/>
+        </insert>
+
+        <insert tableName="users_roles">
+            <column name="role_id" valueNumeric="3"/>
+            <column name="user_id" valueNumeric="7"/>
+        </insert>
+
+        <insert tableName="users_roles">
+            <column name="role_id" valueNumeric="3"/>
+            <column name="user_id" valueNumeric="8"/>
+        </insert>
+
+        <insert tableName="users_roles">
+            <column name="role_id" valueNumeric="3"/>
+            <column name="user_id" valueNumeric="9"/>
+        </insert>
+
+        <insert tableName="users_roles">
+            <column name="role_id" valueNumeric="3"/>
+            <column name="user_id" valueNumeric="10"/>
+        </insert>
+
+        <insert tableName="users_roles">
+            <column name="role_id" valueNumeric="3"/>
+            <column name="user_id" valueNumeric="11"/>
+        </insert>
+
+        <insert tableName="users_roles">
+            <column name="role_id" valueNumeric="3"/>
+            <column name="user_id" valueNumeric="12"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>

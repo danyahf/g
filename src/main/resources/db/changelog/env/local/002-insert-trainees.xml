@@ -1,0 +1,55 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd">
+
+    <changeSet id="insert-trainees" author="danylo_demchenko@epam.com" context="local">
+        <insert tableName="trainees">
+            <column name="id" valueNumeric="1"/>
+            <column name="date_of_birth" valueDate="1980-08-08"/>
+            <column name="address" value="some address"/>
+            <column name="user_id" valueNumeric="1"/>
+        </insert>
+
+        <insert tableName="trainees">
+            <column name="id" valueNumeric="2"/>
+            <column name="date_of_birth" valueDate="1981-02-02"/>
+            <column name="address" value="some address"/>
+            <column name="user_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="trainees">
+            <column name="id" valueNumeric="3"/>
+            <column name="date_of_birth" valueDate="1983-03-03"/>
+            <column name="address" value="some address"/>
+            <column name="user_id" valueNumeric="3"/>
+        </insert>
+
+        <insert tableName="trainees">
+            <column name="id" valueNumeric="4"/>
+            <column name="date_of_birth" valueDate="1999-09-09"/>
+            <column name="address" value="some address"/>
+            <column name="user_id" valueNumeric="4"/>
+        </insert>
+
+        <insert tableName="trainees">
+            <column name="id" valueNumeric="5"/>
+            <column name="date_of_birth" valueDate="1981-01-01"/>
+            <column name="address" value="some address"/>
+            <column name="user_id" valueNumeric="5"/>
+        </insert>
+
+        <insert tableName="trainees">
+            <column name="id" valueNumeric="6"/>
+            <column name="date_of_birth" valueDate="1989-02-08"/>
+            <column name="address" value="some address"/>
+            <column name="user_id" valueNumeric="6"/>
+        </insert>
+    </changeSet>
+    <changeSet id="reset-trainees-sequence" author="danylo_demchenko@epam.com" context="local">
+        <sql>
+            SELECT setval('trainees_id_seq', (SELECT MAX(id) FROM trainees));
+        </sql>
+    </changeSet>
+</databaseChangeLog>

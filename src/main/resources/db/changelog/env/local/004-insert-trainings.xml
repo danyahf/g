@@ -1,0 +1,85 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd">
+
+    <changeSet id="insert-trainings" author="danylo_demchenko@epam.com" context="local">
+
+        <insert tableName="trainings">
+            <column name="id" valueNumeric="1"/>
+            <column name="trainee_id" valueNumeric="1"/>
+            <column name="trainer_id" valueNumeric="1"/>
+            <column name="training_name" value="Yoga (advanced)"/>
+            <column name="training_type_id" valueNumeric="1"/>
+            <column name="date" valueDate="2025-10-22"/>
+            <column name="duration" valueNumeric="60"/>
+        </insert>
+
+        <insert tableName="trainings">
+            <column name="id" valueNumeric="2"/>
+            <column name="trainee_id" valueNumeric="1"/>
+            <column name="trainer_id" valueNumeric="1"/>
+            <column name="training_name" value="Fitness (intermediate)"/>
+            <column name="training_type_id" valueNumeric="1"/>
+            <column name="date" valueDate="2025-10-23"/>
+            <column name="duration" valueNumeric="65"/>
+        </insert>
+
+        <insert tableName="trainings">
+            <column name="id" valueNumeric="3"/>
+            <column name="trainee_id" valueNumeric="1"/>
+            <column name="trainer_id" valueNumeric="3"/>
+            <column name="training_name" value="Yoga (beginner)"/>
+            <column name="training_type_id" valueNumeric="1"/>
+            <column name="date" valueDate="2025-10-22"/>
+            <column name="duration" valueNumeric="120"/>
+        </insert>
+
+        <insert tableName="trainings">
+            <column name="id" valueNumeric="4"/>
+            <column name="trainee_id" valueNumeric="2"/>
+            <column name="trainer_id" valueNumeric="4"/>
+            <column name="training_name" value="Yoga"/>
+            <column name="training_type_id" valueNumeric="1"/>
+            <column name="date" valueDate="2025-10-22"/>
+            <column name="duration" valueNumeric="45"/>
+        </insert>
+
+        <insert tableName="trainings">
+            <column name="id" valueNumeric="5"/>
+            <column name="trainee_id" valueNumeric="1"/>
+            <column name="trainer_id" valueNumeric="5"/>
+            <column name="training_name" value="Yoga"/>
+            <column name="training_type_id" valueNumeric="1"/>
+            <column name="date" valueDate="2025-10-22"/>
+            <column name="duration" valueNumeric="60"/>
+        </insert>
+
+        <insert tableName="trainings">
+            <column name="id" valueNumeric="6"/>
+            <column name="trainee_id" valueNumeric="1"/>
+            <column name="trainer_id" valueNumeric="6"/>
+            <column name="training_name" value="Yoga"/>
+            <column name="training_type_id" valueNumeric="1"/>
+            <column name="date" valueDate="2025-10-22"/>
+            <column name="duration" valueNumeric="160"/>
+        </insert>
+
+        <insert tableName="trainings">
+            <column name="id" valueNumeric="7"/>
+            <column name="trainee_id" valueNumeric="1"/>
+            <column name="trainer_id" valueNumeric="1"/>
+            <column name="training_name" value="Fitness"/>
+            <column name="training_type_id" valueNumeric="3"/>
+            <column name="date" valueDate="2025-10-22"/>
+            <column name="duration" valueNumeric="160"/>
+        </insert>
+
+    </changeSet>
+    <changeSet id="reset-trainings-sequence" author="danylo_demchenko@epam.com" context="local">
+        <sql>
+            SELECT setval('trainings_id_seq', (SELECT MAX(id) FROM trainings));
+        </sql>
+    </changeSet>
+</databaseChangeLog>
