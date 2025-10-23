@@ -1,0 +1,118 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd">
+
+    <changeSet id="insert-users" author="danylo_demchenko@epam.com" context="local">
+        <insert tableName="users">
+            <column name="id" valueNumeric="1"/>
+            <column name="first_name" value="Alex"/>
+            <column name="last_name" value="Smith"/>
+            <column name="username" value="Alex.Smith"/>
+            <column name="password" value="qwerty"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="2"/>
+            <column name="first_name" value="John"/>
+            <column name="last_name" value="Doe"/>
+            <column name="username" value="John.Doe"/>
+            <column name="password" value="qwerty"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="3"/>
+            <column name="first_name" value="Walter"/>
+            <column name="last_name" value="White"/>
+            <column name="username" value="Walter.White"/>
+            <column name="password" value="qwerty"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="4"/>
+            <column name="first_name" value="Hector"/>
+            <column name="last_name" value="Salamanca"/>
+            <column name="username" value="Hector.Salamanca"/>
+            <column name="password" value="qwerty"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="5"/>
+            <column name="first_name" value="Eduardo"/>
+            <column name="last_name" value="Salamanca"/>
+            <column name="username" value="Eduardo.Salamanca"/>
+            <column name="password" value="qwerty"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="6"/>
+            <column name="first_name" value="Skyler"/>
+            <column name="last_name" value="White"/>
+            <column name="username" value="Skyler.White"/>
+            <column name="password" value="qwerty"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="7"/>
+            <column name="first_name" value="James"/>
+            <column name="last_name" value="McGill"/>
+            <column name="username" value="James.McGill"/>
+            <column name="password" value="qwerty"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="8"/>
+            <column name="first_name" value="Chuck"/>
+            <column name="last_name" value="McGill"/>
+            <column name="username" value="Chuck.McGill"/>
+            <column name="password" value="qwerty"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="9"/>
+            <column name="first_name" value="Kim"/>
+            <column name="last_name" value="McGill"/>
+            <column name="username" value="Kim.McGill"/>
+            <column name="password" value="qwerty"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="10"/>
+            <column name="first_name" value="Elon"/>
+            <column name="last_name" value="Musk"/>
+            <column name="username" value="Elon.Musk"/>
+            <column name="password" value="qwerty"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="11"/>
+            <column name="first_name" value="Vlad"/>
+            <column name="last_name" value="Ten"/>
+            <column name="username" value="Vlad.Ten"/>
+            <column name="password" value="qwerty"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="12"/>
+            <column name="first_name" value="Mia"/>
+            <column name="last_name" value="Wallace"/>
+            <column name="username" value="Mia.Wallace"/>
+            <column name="password" value="qwerty"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="13"/>
+            <column name="first_name" value="admin"/>
+            <column name="last_name" value="admin"/>
+            <column name="username" value="admin.admin"/>
+            <column name="password" value="admin"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+    <changeSet id="reset-users-sequence" author="danylo_demchenko@epam.com" context="local">
+        <sql>
+            SELECT setval('users_id_seq', (SELECT MAX(id) FROM users));
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,30 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd">
+
+    <changeSet id="insert-users" author="danylo_demchenko@epam.com" context="prod">
+        <insert tableName="users">
+            <column name="id" valueNumeric="1"/>
+            <column name="first_name" value="admin"/>
+            <column name="last_name" value="admin1"/>
+            <column name="username" value="admin.admin1"/>
+            <column name="password" value="qwerty"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="2"/>
+            <column name="first_name" value="admin"/>
+            <column name="last_name" value="admin2"/>
+            <column name="username" value="admin.admin2"/>
+            <column name="password" value="qwerty"/>
+            <column name="is_active" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+    <changeSet id="reset-users-sequence" author="danylo_demchenko@epam.com" context="prod">
+        <sql>
+            SELECT setval('users_id_seq', (SELECT MAX(id) FROM users));
+        </sql>
+    </changeSet>
+</databaseChangeLog>

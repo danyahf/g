@@ -1,0 +1,35 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd">
+
+    <changeSet id="insert-trainees-trainers" author="danylo_demchenko@epam.com" context="local">
+
+        <insert tableName="trainees_trainers">
+            <column name="trainee_id" valueNumeric="1"/>
+            <column name="trainer_id" valueNumeric="1"/>
+        </insert>
+
+        <insert tableName="trainees_trainers">
+            <column name="trainee_id" valueNumeric="1"/>
+            <column name="trainer_id" valueNumeric="3"/>
+        </insert>
+
+        <insert tableName="trainees_trainers">
+            <column name="trainee_id" valueNumeric="2"/>
+            <column name="trainer_id" valueNumeric="4"/>
+        </insert>
+
+        <insert tableName="trainees_trainers">
+            <column name="trainee_id" valueNumeric="1"/>
+            <column name="trainer_id" valueNumeric="5"/>
+        </insert>
+
+        <insert tableName="trainees_trainers">
+            <column name="trainee_id" valueNumeric="1"/>
+            <column name="trainer_id" valueNumeric="6"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>
